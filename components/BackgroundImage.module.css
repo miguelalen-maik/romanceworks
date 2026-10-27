@@ -1,0 +1,14 @@
+.image {
+  opacity: 0;
+  transition: opacity 400ms ease-out;
+}
+
+.image[data-ready="true"] {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image {
+    transition: none;
+  }
+}

@@ -1,18 +1,12 @@
-import Image from "next/image";
+import BackgroundImage from "@/components/BackgroundImage";
+import LiquidLogo from "@/components/LiquidLogo";
 import styles from "./page.module.css";
 
 export default function HomePage() {
   return (
     <main className={styles.page}>
       <div className={styles.background} aria-hidden="true">
-        <Image
-          src="/coming-soon/background.png"
-          alt=""
-          fill
-          sizes="100vw"
-          preload
-          className={styles.backgroundImage}
-        />
+        <BackgroundImage className={styles.backgroundImage} />
       </div>
 
       <div className={styles.content}>
@@ -31,13 +25,7 @@ export default function HomePage() {
         </header>
 
         <h1 className={styles.logo}>
-          <img
-            src="/coming-soon/logo.svg"
-            alt="ROMANCE"
-            width={1240.13}
-            height={217.023}
-            className={styles.logoImage}
-          />
+          <LiquidLogo imageClassName={styles.logoImage} />
         </h1>
 
         <footer className={styles.info}>

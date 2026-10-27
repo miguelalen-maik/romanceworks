@@ -1,0 +1,32 @@
+.stage {
+  position: relative;
+  display: block;
+}
+
+.surface {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.stage[data-liquid-active="true"] .surface {
+  opacity: 1;
+}
+
+.stage[data-liquid-active="true"] > img {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce), (hover: none), (pointer: coarse), (max-width: 47.999rem) {
+  .stage[data-liquid-active="true"] .surface {
+    opacity: 0;
+  }
+
+  .stage[data-liquid-active="true"] > img {
+    opacity: 1;
+  }
+}
