@@ -64,6 +64,24 @@
   line-height: 0;
 }
 
+@keyframes logoEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: logoEntrance 1100ms cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  }
+}
+
 .logoImage {
   display: block;
   width: 100%;

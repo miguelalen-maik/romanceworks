@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  background-color: #000000;
+}
+
 body {
   margin: 0;
   font-family: "ABC Areal", sans-serif;
