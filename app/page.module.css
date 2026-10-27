@@ -1,0 +1,125 @@
+.page {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding-block: 1.5rem;
+  /* El margen crece entre tablet y laptop; el ancho máximo centra desktop. */
+  padding-inline: clamp(1.5rem, calc(16.0811vw - 5.5355rem), 8.9375rem);
+  color: #abb3ca;
+}
+
+.background {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+}
+
+.background::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: rgb(0 0 0 / 80%);
+}
+
+.backgroundImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 6.25rem;
+  width: 100%;
+  max-width: 77.5rem;
+  min-width: 0;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.monogram {
+  display: block;
+  flex-shrink: 0;
+}
+
+.name {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.02;
+  text-align: right;
+}
+
+.logo {
+  margin: 0;
+  line-height: 0;
+}
+
+.logoImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.info {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.info p {
+  margin: 0;
+}
+
+.info strong {
+  font-weight: 700;
+}
+
+.contact {
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.contact a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.contact a:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 4px;
+}
+
+@media (min-width: 100rem) {
+  .background::after {
+    background: rgb(0 0 0 / 70%);
+  }
+}
+
+@media (max-width: 35rem) {
+  .info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact {
+    text-align: left;
+  }
+}

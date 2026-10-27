@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "ABC Areal", sans-serif;
+}
+@font-face {
+  font-family: "ABC Areal";
+  src: url("/fonts/ABCArealSuperfamilyVariable.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
